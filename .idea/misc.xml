@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2465" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/edit_text_border.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/edit_text_border_error.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/edit_text_border_focused.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/edit_text_border_normal.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_add_circle.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_arrow_left.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_call.xml" value="0.2465" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_call_edit_text.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_call_edit_text_error.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_call_edit_text_focused.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_device_message.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_document.xml" value="0.2465" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_home.xml" value="0.2465" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2465" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_launcher_mk_logo_background.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_launcher_mk_logo_foreground.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_lock.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_lock_error.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_lock_focused.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_logo_img.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_message_text.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_mk_logo.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_no_photo_found.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_outline_message_24.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_shop.xml" value="0.2465" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_sms.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_sms_error.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_sms_focused.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_splash_screen.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_user_add_focused.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_user_edit_text.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_user_edit_text_error.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/ic_user_edit_text_focused.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/nav_item_color_state.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/round_button.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/selector_ic_login.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/selector_ic_name.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/selector_ic_password.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/drawable/selector_ic_phone.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/font/roboto_bold.xml" value="0.30364583333333334" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/activity_authorization.xml" value="0.264" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/activity_greeting.xml" value="0.22418478260869565" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/activity_main.xml" value="0.2604166666666667" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/activity_reg.xml" value="0.264" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/activity_spash_screen.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/fragment_bazar.xml" value="0.21693840579710144" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/fragment_bazar_list.xml" value="0.2604166666666667" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/fragment_contacts.xml" value="0.1334853090172239" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/fragment_contacts_list.xml" value="0.2604166666666667" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/fragment_home_list.xml" value="0.2604166666666667" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/fragment_other.xml" value="0.26811594202898553" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/layout/spash_screen.xml" value="0.1334853090172239" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/menu/button_nav_menu.xml" value="0.27447916666666666" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/MyKowel/app/src/main/res/menu/mobile_navigation.xml" value="0.27447916666666666" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/my_kowel_kotlin-main/app/src/main/res/layout/activity_add_new_item_bazar.xml" value="0.264" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/my_kowel_kotlin-main/app/src/main/res/layout/activity_authorization.xml" value="0.1334853090172239" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/my_kowel_kotlin-main/app/src/main/res/layout/fragment_bazar.xml" value="0.1" />
+        <entry key="..\:/My_directory_photo_project/Projects/Android_project/my_kowel_kotlin-main/app/src/main/res/layout/fragment_bazar_list.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#D6D6D6</item>
+        <item name="android:titleTextStyle">@style/MyTextAppearance</item>
+    </style>
+    <!-- стиль для текста -->
+    <style name="MyTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorOnPrimary">#2C2C2C</item>
+    </style>
+
+
+
+
+    <style name="Theme.MyKowel" parent="Theme.MaterialComponents.Light.Bridge">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+<!--        <item name="android:windowBackground">@color/color_window_background</item>-->
+
+        <!--        <item name="window"-->
+    </style>
+
+
+
+
+<!--    <style name="mySelectedEditTextStyle" parent="Widget.AppCompat.EditText">-->
+<!--        <item name="colorControlHighlight">@color/purple_700</item>-->
+<!--    </style>-->
+
+<!--    <style name="myErrorEditTextStyle" parent="Widget.AppCompat.EditText">-->
+<!--        <item name="colorControlHighlight">@color/red</item>-->
+<!--    </style>-->
+
+    <!--    <item name="colorPrimary">@color/purple_700</item>-->
+
+    <!--    <item name="colorPrimaryVariant">@color/purple_700</item>-->
+    <!--    <item name="colorOnPrimary">@color/white</item>-->
+    <!--    &lt;!&ndash; Secondary brand color. &ndash;&gt;-->
+    <!--    <item name="colorSecondary">@color/teal_200</item>-->
+    <!--    <item name="colorSecondaryVariant">@color/teal_700</item>-->
+    <!--    <item name="colorOnSecondary">@color/black</item>-->
+    <!--    &lt;!&ndash; Status bar color. &ndash;&gt;-->
+    <!--    <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>-->
+</resources>

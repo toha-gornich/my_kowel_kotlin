@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.cl.mykowel.view.fragments.home.HomeFragment"
+        android:label="Головна"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_bazar"
+        android:name="com.cl.mykowel.view.fragments.bazar.BazarFragment"
+        android:label="Базар"
+        tools:layout="@layout/fragment_bazar" />
+
+    <fragment
+        android:id="@+id/navigation_contacts"
+        android:name="com.cl.mykowel.view.fragments.contacts.ContactsFragment"
+        android:label="Контакти"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/navigation_other"
+        android:name="com.cl.mykowel.view.fragments.other.OtherFragment"
+        android:label="Інше"
+        tools:layout="@layout/fragment_other" />
+
+</navigation>
