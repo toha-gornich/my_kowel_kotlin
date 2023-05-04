@@ -1,60 +1,68 @@
 package com.cl.mykowel.view.fragments.other
 
+
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.cl.mykowel.R
+import androidx.fragment.app.Fragment
+import com.cl.mykowel.*
+import com.cl.mykowel.databinding.FragmentOtherBinding
+import com.cl.mykowel.view.activities.chats.ChatsActivity
+import com.cl.mykowel.view.activities.myItemBazar.MyItemsBazarActivity
+import com.cl.mykowel.view.activities.profile.ProfileActivity
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [OtherFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class OtherFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
+    var binding: FragmentOtherBinding? = null
+    private var arrayList: ArrayList<FOtherButtonModel> = ArrayList()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_other, container, false)
-    }
+        binding = FragmentOtherBinding.inflate(inflater, container, false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment OtherFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            OtherFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        val imageId = intArrayOf(R.drawable.ic_call, R.drawable.ic_call, R.drawable.ic_call)
+        val title = arrayOf("Профіль", "Чати", "Мої оголошення")
+        val description = arrayOf("description", "description", "description")
+
+        for (i in title.indices) {
+
+            val button = FOtherButtonModel(title[i], description[i], imageId[i])
+            arrayList.add(button)
+        }
+
+        binding!!.fragmentOtherLW.isClickable = true
+        binding!!.fragmentOtherLW.adapter = FOtherButtonsAdapter(requireContext(), arrayList)
+
+        lateinit var intent: Intent
+
+
+        binding!!.fragmentOtherLW.setOnItemClickListener { parent, view, position, id ->
+            when (position) {
+                0 -> {
+                    intent = Intent(context, ProfileActivity::class.java)
+                    startActivity(intent)
+                }
+                1 -> {
+                    intent = Intent(context, ChatsActivity::class.java)
+                    startActivity(intent)
+                }
+                2 -> {
+                    intent = Intent(context, MyItemsBazarActivity::class.java)
+                    startActivity(intent)
                 }
             }
+
+
+        }
+
+        // Inflate the layout for this fragment
+        return binding!!.root
     }
+
+
 }

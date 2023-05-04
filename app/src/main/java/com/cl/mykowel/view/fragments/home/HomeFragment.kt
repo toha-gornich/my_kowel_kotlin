@@ -40,7 +40,7 @@ class HomeFragment : Fragment() {
         val view = binding.root
 
         val viewModel = ViewModelProvider(this).get(HomeFragmentViewModel::class.java)
-        viewModel.getNews()
+        viewModel.getNews(requireContext())
         viewModel.myResponseList.observe(viewLifecycleOwner, Observer {
 //            Log.d("TAGS", it.items.get(0).title)
             newsList = it.items

@@ -1,19 +1,19 @@
 package com.cl.mykowel.models.services
 
 import com.cl.mykowel.models.model_contact.ItemContact
+import com.cl.mykowel.models.model_itemBazar.AddNewItemBazar
+import com.cl.mykowel.models.model_itemBazar.AddNewItemBazarResponse
 import com.cl.mykowel.models.model_news.NewsResponse
 import com.cl.mykowel.models.model_user.User
+import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Multipart
-import retrofit2.http.POST
-import retrofit2.http.Part
+import retrofit2.http.*
 import com.cl.mykowel.models.ItemBazar as ItemBazar
 
 interface ApiService {
     @GET("feed/json")
-    suspend fun getItemsNews():NewsResponse
+    suspend fun getItemsNews(): NewsResponse
 
     @POST("login")
     @Multipart
@@ -34,8 +34,22 @@ interface ApiService {
     ): Call<User>
 
     @GET("contacts/get")
-    suspend fun getItemContact():List<ItemContact>
+    suspend fun getItemContact(): List<ItemContact>
 
     @GET("market/get")
-    suspend fun getItemBazar():List<ItemBazar>
+    suspend fun getItemBazar(): List<ItemBazar>
+
+    @POST("market/add")
+    @Multipart
+    suspend fun addItemBazar(
+        @Header("token") token: String,
+        @Part("title") title: RequestBody,
+        @Part("description") description: RequestBody,
+        @Part("price") price: RequestBody,
+        @Part("category") category: RequestBody,
+        @Part photo: MultipartBody.Part
+    ): List<ItemBazar>
+
 }
+
+

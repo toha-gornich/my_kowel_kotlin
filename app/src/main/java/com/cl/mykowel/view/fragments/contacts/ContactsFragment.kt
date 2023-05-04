@@ -36,7 +36,7 @@ class ContactsFragment : Fragment() {
         binding = FragmentContactsListBinding.inflate(inflater, container, false)
         val view = binding!!.root
         val viewModel = ViewModelProvider(this).get(ContactsFragmentViewModel::class.java)
-        viewModel.getContacts()
+        viewModel.getContacts(requireContext())
         viewModel.myResponseList.observe(viewLifecycleOwner, Observer {
 //            newsList = it
             adapter = ContactsRecyclerViewAdapter(it, context)

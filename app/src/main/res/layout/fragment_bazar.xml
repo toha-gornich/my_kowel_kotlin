@@ -5,66 +5,106 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="8dp"
-    android:layout_marginVertical="5dp"
-    app:cardCornerRadius="8dp">
+    android:layout_marginHorizontal="@dimen/grid_2"
+    android:layout_marginVertical="@dimen/grid_2"
+    app:cardCornerRadius="@dimen/grid_2">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <TextView
+            android:textStyle = "bold"
+            android:id="@+id/title_bazar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="title"
+            android:textSize="@dimen/h2" />
 
         <ImageView
             android:id="@+id/photo_bazar_image"
             android:layout_width="200dp"
             android:layout_height="200dp"
+            android:layout_below="@id/title_bazar_text"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_weight="1" />
 
-        <TextView
-            android:id="@+id/title_bazar_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:text="title"
-            android:textColor="@color/black"
-            android:textSize="@dimen/h2" />
+
         <!--    android:textAppearance="?attr/textAppearanceListItem"-->
         <TextView
             android:id="@+id/description_bazar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_below="@id/photo_bazar_image"
+            android:layout_margin="@dimen/grid_2"
             android:text="description"
+            android:textSize="@dimen/h4" />
+
+        <TextView
+            android:id="@+id/priceVoid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/description_bazar_text"
+            android:layout_marginStart="@dimen/grid_2"
+
+            android:layout_marginTop="@dimen/grid_2"
+            android:layout_marginEnd="@dimen/grid_2"
+            android:layout_marginBottom="@dimen/grid_2"
+            android:text="ціна:"
             android:textSize="@dimen/h4" />
 
         <TextView
             android:id="@+id/price_bazar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor ="@color/black"
 
-            android:layout_margin="10dp"
+            android:layout_below="@id/description_bazar_text"
+            android:layout_marginStart="@dimen/grid_2"
+            android:layout_marginTop="@dimen/grid_2"
+            android:layout_marginEnd="@dimen/grid_2"
+            android:layout_marginBottom="@dimen/grid_2"
+            android:layout_toRightOf="@id/priceVoid"
             android:text="price"
             android:textSize="@dimen/h4" />
 
+        <TextView
+            android:id="@+id/phoneVoid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/priceVoid"
+            android:layout_marginStart="@dimen/grid_2"
+            android:layout_marginTop="@dimen/grid_2"
+            android:layout_marginEnd="@dimen/grid_2"
+            android:layout_marginBottom="@dimen/grid_2"
+            android:text="Номер телефону:"
+            android:textSize="@dimen/h4" />
 
         <TextView
             android:id="@+id/phone_bazar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="phone"
+            android:layout_below="@id/priceVoid"
+            android:layout_toRightOf="@id/phoneVoid"
+            android:textColor ="@color/black"
 
+            android:layout_marginStart="@dimen/grid_2"
+            android:layout_marginTop="@dimen/grid_2"
+            android:layout_marginEnd="@dimen/grid_2"
+            android:layout_marginBottom="@dimen/grid_2"
+            android:text="phone"
             android:textSize="@dimen/h4" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="10dp"
-            android:background="@android:color/darker_gray" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </androidx.cardview.widget.CardView>

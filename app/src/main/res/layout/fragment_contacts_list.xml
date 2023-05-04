@@ -7,5 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutManager="LinearLayoutManager"
+    android:background="?attr/colorFragmentBackground"
+
     tools:context=".view.fragments.contacts.ContactsFragment"
     tools:listitem="@layout/fragment_contacts" />

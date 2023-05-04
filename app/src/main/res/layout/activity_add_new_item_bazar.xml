@@ -6,47 +6,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".view.activities.AddNewItemBazarActivity">
+    tools:context=".view.activities.newBazar.AddNewItemBazarActivity">
 
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:id="@+id/toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="?attr/actionBarSize"-->
-<!--        android:background="@color/white"-->
-<!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:navigationIcon="@drawable/ic_arrow_left"-->
-<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
+    <!--    <androidx.appcompat.widget.Toolbar-->
+    <!--        android:id="@+id/toolbar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="?attr/actionBarSize"-->
+    <!--        android:background="@color/white"-->
+    <!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:navigationIcon="@drawable/ic_arrow_left"-->
+    <!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/title_addItem_bazar"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:fontFamily="sans-serif-medium"-->
-<!--            android:text="@string/txt_title_add_item_bazar"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="@dimen/h3"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/toolbar"-->
-<!--            app:layout_constraintVertical_bias="0.036" />-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/title_addItem_bazar"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="sans-serif-medium"-->
+    <!--            android:text="@string/txt_title_add_item_bazar"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="@dimen/h3"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.0"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/toolbar"-->
+    <!--            app:layout_constraintVertical_bias="0.036" />-->
 
 
-<!--    </androidx.appcompat.widget.Toolbar>-->
+    <!--    </androidx.appcompat.widget.Toolbar>-->
 
 
     <ScrollView
 
         android:id="@+id/scrollView"
-        android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
+        android:paddingHorizontal="20dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,8 +70,8 @@
                 android:layout_marginBottom="20dp"
                 android:text="@string/txt_title"
                 android:textColor="@color/black" />
-<!--            android:id="@+id/textInputLayoutLogin"-->
-<!--            android:id="@+id/titleAddItemEditText"-->
+            <!--            android:id="@+id/textInputLayoutLogin"-->
+            <!--            android:id="@+id/titleAddItemEditText"-->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/titleTxtIL"
@@ -80,17 +80,16 @@
                 android:layout_height="wrap_content"
 
                 android:hint="@string/txt_title"
-                app:hintTextColor="@color/color_hint"
                 app:boxStrokeColor="@color/purple_500"
                 app:boxStrokeErrorColor="@color/red"
                 app:counterEnabled="true"
                 app:counterMaxLength="50"
                 app:endIconMode="clear_text"
+                app:hintTextColor="@color/color_hint"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                >
+                app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/titleTxtIET"
@@ -117,12 +116,12 @@
 
                 android:hint="@string/txt_description"
 
-                app:hintTextColor="@color/color_hint"
                 app:boxStrokeColor="@color/purple_500"
                 app:boxStrokeErrorColor="@color/red"
                 app:counterEnabled="true"
                 app:counterMaxLength="500"
                 app:endIconMode="clear_text"
+                app:hintTextColor="@color/color_hint"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -134,10 +133,9 @@
                     android:id="@+id/descriptionTxtIET"
                     android:layout_width="match_parent"
                     android:layout_height="177dp"
-                    android:maxLength="500"
-                    android:gravity="top|left"/>
+                    android:gravity="top|left"
+                    android:maxLength="500" />
             </com.google.android.material.textfield.TextInputLayout>
-
 
 
             <TextView
@@ -152,11 +150,11 @@
 
 
             <Spinner
-                android:id="@+id/spinner"
-
+                android:id="@+id/spCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:entries="@array/categories_bazar" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -165,9 +163,9 @@
                 android:layout_marginTop="20dp"
                 android:text="@string/txt_price"
                 android:textColor="@color/black" />
-<!--            android:id="@+id/priceAddItemEditText"-->
-<!--            android:id="@+id/textInputLayoutEmail"-->
-<!---->
+            <!--            android:id="@+id/priceAddItemEditText"-->
+            <!--            android:id="@+id/textInputLayoutEmail"-->
+            <!---->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/priceTxtIL"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -175,15 +173,14 @@
                 android:layout_height="wrap_content"
 
                 android:hint="@string/txt_price"
-                app:hintTextColor="@color/color_hint"
                 app:boxStrokeColor="@color/purple_500"
                 app:boxStrokeErrorColor="@color/red"
                 app:endIconMode="clear_text"
+                app:hintTextColor="@color/color_hint"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                >
+                app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/priceTxtIET"
@@ -191,6 +188,7 @@
                     android:layout_height="match_parent"
                     android:maxLength="20" />
             </com.google.android.material.textfield.TextInputLayout>
+
 
             <ImageView
                 android:id="@+id/imageAddItemBazar"
@@ -209,12 +207,24 @@
                 android:layout_marginVertical="20dp"
                 android:text="Добавити фото" />
 
+
             <Button
                 android:id="@+id/btn_send_item_bazar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:text="відправити" />
+
+            <!--            <Button-->
+            <!--                android:id="@+id/button"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Button" />-->
+            <!--            <Button-->
+            <!--                android:id="@+id/buttonPanel"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Button" />-->
 
 
         </LinearLayout>

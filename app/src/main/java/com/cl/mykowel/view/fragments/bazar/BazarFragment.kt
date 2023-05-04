@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.cl.mykowel.databinding.FragmentBazarListBinding
-import com.cl.mykowel.view.activities.AddNewItemBazarActivity
+import com.cl.mykowel.view.activities.newBazar.AddNewItemBazarActivity
 import com.cl.mykowel.view.fragments.adapters.BazarRecyclerViewAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -19,7 +19,6 @@ class BazarFragment : Fragment() {
     private var newBazarFAB: FloatingActionButton? = null
     private var binding: FragmentBazarListBinding? = null
 
-    //    private var list: List<ItemBazar>? = null
     private var adapter: BazarRecyclerViewAdapter? = null
 
 
@@ -29,10 +28,9 @@ class BazarFragment : Fragment() {
     ): View? {
         //ініціалізація binding
         binding = FragmentBazarListBinding.inflate(inflater, container, false)
-        val view = binding!!.root
 
 
-        return view
+        return binding!!.root
     }
 
 
@@ -49,7 +47,7 @@ class BazarFragment : Fragment() {
         val viewModel = ViewModelProvider(this).get(BazarFragmentViewModel::class.java)
 
         // get request
-        viewModel.getItemBazar()
+        viewModel.getItemBazar(requireContext())
         viewModel.myResponseList.observe(
             viewLifecycleOwner, Observer
             {
@@ -60,6 +58,8 @@ class BazarFragment : Fragment() {
         binding!!.NewBazarFAB.setOnClickListener(View.OnClickListener {
             val intent = Intent(activity, AddNewItemBazarActivity::class.java)
             startActivity(intent)
+
+
 
 //            MAIN.navController.navigate(R.id.addNewItemBazarFragment)
 
