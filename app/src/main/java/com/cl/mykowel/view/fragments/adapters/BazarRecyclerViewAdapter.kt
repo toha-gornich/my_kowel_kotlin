@@ -34,7 +34,8 @@ class BazarRecyclerViewAdapter(
         holder.titleTextView.text = item.title
         holder.descriptionTextView.text = item.description
         holder.priceTextView.text = item.price
-        holder.phoneTextView.text = item.pnumber
+        val str = "+380"+ item.pnumber
+        holder.phoneTextView.text = str
         val imagePath = "" +
                 list.get(position).photo
         if (context != null) {

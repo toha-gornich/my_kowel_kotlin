@@ -18,7 +18,7 @@ import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
 import java.lang.String
 
-class AddNewItemBazarActivityViewModel() :
+class AddNewItemBazarActivityViewModel :
     ViewModel() {
     private val myResponseList: MutableLiveData<List<ItemBazar>> = MutableLiveData()
 

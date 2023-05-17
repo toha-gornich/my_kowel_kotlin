@@ -1,15 +1,13 @@
 package com.cl.mykowel.models.services
 
+import com.cl.mykowel.models.ItemBazar
 import com.cl.mykowel.models.model_contact.ItemContact
-import com.cl.mykowel.models.model_itemBazar.AddNewItemBazar
-import com.cl.mykowel.models.model_itemBazar.AddNewItemBazarResponse
 import com.cl.mykowel.models.model_news.NewsResponse
 import com.cl.mykowel.models.model_user.User
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
-import com.cl.mykowel.models.ItemBazar as ItemBazar
 
 interface ApiService {
     @GET("feed/json")
@@ -22,6 +20,9 @@ interface ApiService {
         @Part("password") password: RequestBody
     ): Call<User>
 
+
+    @DELETE("user/delete")
+    suspend fun deleteUser(@Header("token") token: String)
 
     @POST("register")
     @Multipart

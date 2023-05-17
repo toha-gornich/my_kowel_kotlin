@@ -49,7 +49,7 @@ class RegActivity : AppCompatActivity() {
     }
     private fun createUser() {
         val user =
-            User(loginEditText.text.toString(), passwordEditText.text.toString())
+            User(loginEditText.text.toString(),nameEditText.text.toString(),emailEditText.text.toString(),phoneEditText.text.toString(), passwordEditText.text.toString())
 
         viewModel.createNewUser(this, user)
 
