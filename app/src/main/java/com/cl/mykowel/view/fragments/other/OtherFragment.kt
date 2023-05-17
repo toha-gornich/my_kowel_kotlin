@@ -9,9 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cl.mykowel.*
 import com.cl.mykowel.databinding.FragmentOtherBinding
-import com.cl.mykowel.view.activities.chats.ChatsActivity
-import com.cl.mykowel.view.activities.myItemBazar.MyItemsBazarActivity
-import com.cl.mykowel.view.activities.profile.ProfileActivity
+import com.cl.mykowel.view.activities.poster.PosterActivity
 
 
 class OtherFragment : Fragment() {
@@ -26,8 +24,8 @@ class OtherFragment : Fragment() {
         binding = FragmentOtherBinding.inflate(inflater, container, false)
 
         val imageId = intArrayOf(R.drawable.ic_call, R.drawable.ic_call, R.drawable.ic_call)
-        val title = arrayOf("Профіль", "Чати", "Мої оголошення")
-        val description = arrayOf("description", "description", "description")
+        val title = arrayOf("Афіша подій")
+        val description = arrayOf("Події в місті Ковель")
 
         for (i in title.indices) {
 
@@ -44,17 +42,17 @@ class OtherFragment : Fragment() {
         binding!!.fragmentOtherLW.setOnItemClickListener { parent, view, position, id ->
             when (position) {
                 0 -> {
-                    intent = Intent(context, ProfileActivity::class.java)
+                    intent = Intent(context, PosterActivity::class.java)
                     startActivity(intent)
                 }
-                1 -> {
-                    intent = Intent(context, ChatsActivity::class.java)
-                    startActivity(intent)
-                }
-                2 -> {
-                    intent = Intent(context, MyItemsBazarActivity::class.java)
-                    startActivity(intent)
-                }
+//                1 -> {
+//                    intent = Intent(context, ChatsActivity::class.java)
+//                    startActivity(intent)
+//                }
+//                2 -> {
+//                    intent = Intent(context, MyItemsBazarActivity::class.java)
+//                    startActivity(intent)
+//                }
             }
 
 

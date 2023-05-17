@@ -1,6 +1,9 @@
 package com.cl.mykowel.view.activities.home
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -9,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.cl.mykowel.R
 import com.cl.mykowel.databinding.ActivityMainBinding
+import com.cl.mykowel.view.activities.profile.ProfileActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +40,21 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 //        setActionBar()
     }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.action_bar_menu, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_button -> {
+                var intent = Intent(this, ProfileActivity::class.java)
+               startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 
 
 }

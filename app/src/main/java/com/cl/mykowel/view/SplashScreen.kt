@@ -34,7 +34,6 @@ class SplashScreen : AppCompatActivity() {
             MODE_PRIVATE
         )
         //перевірка на наявність ключа "token"
-        Log.d("token", sharedPref.all.toString())
         if (sharedPref.contains("token")) {
             startActivity(Intent(this, MainActivity::class.java))
         } else {

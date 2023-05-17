@@ -25,6 +25,7 @@
     <string name="txt_price">Ціна</string>
     <string name="descriptionTwoPart">Увійди щоби отримати доступ до системи</string>
     <string name="descriptionOnePart">Помічник \"My Kovel\", радий тебе бачити Усе що тобі потрібно, відтепер у твоїй кишені Адже помічник створений спеціально для того, щоби ти мав усе необхідне в одному місці </string>
+    <string name="action_button_title">title</string>
     <string-array name="categories_bazar">
         <item>Виберіть категорію</item>
         <item>Одяг і взуття</item>
@@ -35,7 +36,6 @@
         <item>Електроніка та механіка</item>
         <item>Нерухомість</item>
     </string-array>
-
 
 
 </resources>

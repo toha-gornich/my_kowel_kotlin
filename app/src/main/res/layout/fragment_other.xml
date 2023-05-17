@@ -8,20 +8,11 @@
 
     >
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageViewOtherButtons"
-        android:layout_width="@dimen/image_size"
-        android:layout_height="@dimen/image_size"
-        android:layout_gravity="center"
-        android:layout_marginVertical="@dimen/grid_2"
-        android:src="@drawable/ic_no_photo_found"
-        />
-
     <ListView
         android:id="@+id/fragmentOtherLW"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/other_buttons">
-
     </ListView>
+
 </LinearLayout>

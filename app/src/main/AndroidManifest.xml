@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -19,6 +18,9 @@
         android:theme="@style/Theme.MyKowel"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".view.activities.poster.PosterActivity"
+            android:exported="false" />
         <activity
             android:name=".view.activities.myItemBazar.MyItemsBazarActivity"
             android:exported="false"
@@ -58,9 +60,7 @@
             android:name=".view.activities.home.MainActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"
-
- />
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".view.SplashScreen"
             android:exported="true"
