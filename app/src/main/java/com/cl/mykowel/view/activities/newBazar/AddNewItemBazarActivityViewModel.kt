@@ -9,8 +9,6 @@ import com.cl.mykowel.models.ItemBazar
 import com.cl.mykowel.models.model_itemBazar.AddNewItemBazar
 import com.cl.mykowel.models.services.RetroInstanceMyKowel
 import kotlinx.coroutines.launch
-import okhttp3.MediaType
-import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

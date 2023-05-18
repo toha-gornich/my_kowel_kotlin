@@ -3,17 +3,19 @@ package com.cl.mykowel.view.activities.profile
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.cl.mykowel.R
 import com.cl.mykowel.databinding.ActivityProfileBinding
 import com.cl.mykowel.view.activities.authorization.AuthorizationActivity
-import com.cl.mykowel.view.activities.newBazar.AddNewItemBazarActivityViewModel
 import java.lang.String
+import kotlin.apply
 
 
 class ProfileActivity : AppCompatActivity() {
+    private var adapter: MyItemsBazarAdapter? = null
     private var binding: ActivityProfileBinding? = null
     private var viewModel: ProfileActivityViewModel? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +23,12 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         initViewModel()
+        viewModel?.getMyItemBazar(this@ProfileActivity)
+
+        viewModel?.myResponseList?.observe(this, Observer {
+            adapter = MyItemsBazarAdapter(it, this@ProfileActivity)
+            init()
+        })
         val actionBar = supportActionBar
         actionBar?.title = "Профіль"
         binding?.btnExit?.setOnClickListener {
@@ -31,7 +39,7 @@ class ProfileActivity : AppCompatActivity() {
         }
     }
 
-    private fun exitWithAccount(){
+    private fun exitWithAccount() {
         val sharedPref = getSharedPreferences(
             String.valueOf(R.string.shared_preferences_user_data),
             MODE_PRIVATE
@@ -44,12 +52,21 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    private fun deleteAccount(){
+
+    private fun deleteAccount() {
 
         viewModel?.deleteUser(this@ProfileActivity)
         exitWithAccount()
     }
+
     private fun initViewModel() {
         viewModel = ViewModelProvider(this)[ProfileActivityViewModel::class.java]
+    }
+
+    private fun init() {
+        binding?.apply {
+            rvMyItemsBazar.layoutManager = LinearLayoutManager(this@ProfileActivity)
+            rvMyItemsBazar.adapter = adapter
+        }
     }
 }

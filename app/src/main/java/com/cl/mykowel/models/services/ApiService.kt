@@ -10,6 +10,8 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface ApiService {
+
+
     @GET("feed/json")
     suspend fun getItemsNews(): NewsResponse
 
@@ -51,6 +53,13 @@ interface ApiService {
         @Part photo: MultipartBody.Part
     ): List<ItemBazar>
 
+
+    @GET("market/get/user")
+    suspend fun getMyItemBazar(@Query("value") token: String): ArrayList<ItemBazar>
+
+    @DELETE("market/delete")
+    suspend fun deleteItemBazar(@Header("token") token: String,
+                                @Header("id") id: Int)
 }
 
 

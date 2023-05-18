@@ -36,6 +36,9 @@
         <item>Електроніка та механіка</item>
         <item>Нерухомість</item>
     </string-array>
+    <string name="txt_delete">Видалити</string>
+    <string name="txt_delete_account">Видалити акаунт</string>
+    <string name="txt_exit">Вийти</string>
 
 
 </resources>

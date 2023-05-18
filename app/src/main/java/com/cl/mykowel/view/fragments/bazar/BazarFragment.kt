@@ -44,7 +44,7 @@ class BazarFragment : Fragment() {
         })
 
         //ініціалізація ViewModel
-        val viewModel = ViewModelProvider(this).get(BazarFragmentViewModel::class.java)
+        val viewModel = ViewModelProvider(this)[BazarFragmentViewModel::class.java]
 
         // get request
         viewModel.getItemBazar(requireContext())
