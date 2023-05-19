@@ -1,16 +1,13 @@
 package com.cl.mykowel.view.activities.profile
 
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cl.mykowel.R
-import com.cl.mykowel.models.ItemBazar
+import com.cl.mykowel.models.model_itemBazar.ItemBazar
 import com.cl.mykowel.models.services.RetroInstanceMyKowel
 import kotlinx.coroutines.launch
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
 
 class ProfileActivityViewModel() : ViewModel() {
     val myResponseList: MutableLiveData<ArrayList<ItemBazar>> = MutableLiveData()

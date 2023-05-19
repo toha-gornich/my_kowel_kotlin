@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.cl.mykowel.databinding.FragmentBazarBinding
-import com.cl.mykowel.models.ItemBazar
+import com.cl.mykowel.models.model_itemBazar.ItemBazar
 
 
 class BazarRecyclerViewAdapter(

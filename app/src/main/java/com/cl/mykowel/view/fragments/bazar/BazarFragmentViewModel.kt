@@ -4,12 +4,10 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import android.util.Log
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.cl.mykowel.models.ItemBazar
+import com.cl.mykowel.models.model_itemBazar.ItemBazar
 import com.cl.mykowel.models.services.RetroInstanceMyKowel
 import kotlinx.coroutines.launch
 

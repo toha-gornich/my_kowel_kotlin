@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cl.mykowel.R
-import com.cl.mykowel.models.ItemBazar
+import com.cl.mykowel.models.model_itemBazar.ItemBazar
 import com.cl.mykowel.models.model_itemBazar.AddNewItemBazar
 import com.cl.mykowel.models.services.RetroInstanceMyKowel
 import kotlinx.coroutines.launch
@@ -43,11 +43,14 @@ class AddNewItemBazarActivityViewModel :
 
         val token = sharedPref.getString("token", "token")
         viewModelScope.launch {
-            myResponseList.postValue(
-                RetroInstanceMyKowel.getRetroInstance()
-                    .addItemBazar(token!!, title, description, price, category, photo)
-
-            )
+//            try {
+                val response = RetroInstanceMyKowel.getRetroInstance().addItemBazar(token!!, title, description, price, category, photo)
+                myResponseList.postValue(response)
+//            } catch (e: Exception) {
+//                // Обробка помилок
+//                // Наприклад, виведення повідомлення про помилку
+//                e.printStackTrace()
+//            }
         }
     }
 

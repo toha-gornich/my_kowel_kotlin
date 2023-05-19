@@ -10,7 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.cl.mykowel.view.activities.home.MainActivity
 import com.cl.mykowel.view.activities.reg.RegActivity
 import com.cl.mykowel.databinding.ActivityAuthorizationBinding
-import com.cl.mykowel.models.model_user.User
+import com.cl.mykowel.models.model_user.UserAuthModel
+import com.cl.mykowel.models.model_user.UserDataModel
 import com.google.android.material.textfield.TextInputEditText
 
 
@@ -43,7 +44,7 @@ class AuthorizationActivity : AppCompatActivity() {
 
     private fun createUser() {
         val user =
-            User(loginEditText.text.toString(), passwordEditText.text.toString())
+            UserAuthModel(loginEditText.text.toString(), passwordEditText.text.toString())
 
         viewModel.createNewUser(this@AuthorizationActivity,user)
 
@@ -51,7 +52,7 @@ class AuthorizationActivity : AppCompatActivity() {
 
     private fun initViewModel() {
         viewModel = ViewModelProvider(this).get(AuthorizationAtivityViewModel::class.java)
-        viewModel.getCreateNewUserObserver().observe(this, Observer<User?> {
+        viewModel.getCreateNewUserObserver().observe(this, Observer<UserDataModel?> {
 
             if (it == null) {
                 Toast.makeText(

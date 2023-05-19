@@ -188,7 +188,11 @@ class AddNewItemBazarActivity : AppCompatActivity() {
 
         )
 
-        viewModel!!.addItemBazar(this@AddNewItemBazarActivity, itemBazar)
+        try{
+            viewModel!!.addItemBazar(this@AddNewItemBazarActivity, itemBazar)
+        }catch (e:Exception){
+            Toast.makeText(this,"Помилка",Toast.LENGTH_SHORT).show()
+        }
 
     }
 

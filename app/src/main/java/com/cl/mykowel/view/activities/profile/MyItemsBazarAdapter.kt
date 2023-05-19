@@ -13,15 +13,12 @@ import androidx.recyclerview.widget.RecyclerView.*
 import com.bumptech.glide.Glide
 import com.cl.mykowel.R
 import com.cl.mykowel.databinding.ActivityMyItemBazarBinding
-import com.cl.mykowel.models.ItemBazar
-import com.cl.mykowel.models.services.ApiService
+import com.cl.mykowel.models.model_itemBazar.ItemBazar
 import com.cl.mykowel.models.services.RetroInstanceMyKowel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
 
 class MyItemsBazarAdapter(private val list: ArrayList<ItemBazar>, private val context: Context?) :
     Adapter<MyItemsBazarAdapter.ViewHolder>() {

@@ -10,7 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.cl.mykowel.view.activities.authorization.AuthorizationActivity
 import com.cl.mykowel.view.activities.home.MainActivity
 import com.cl.mykowel.databinding.ActivityRegBinding
-import com.cl.mykowel.models.model_user.User
+import com.cl.mykowel.models.model_user.UserDataModel
+import com.cl.mykowel.models.model_user.UserRegModel
 import com.google.android.material.textfield.TextInputEditText
 
 class RegActivity : AppCompatActivity() {
@@ -49,7 +50,7 @@ class RegActivity : AppCompatActivity() {
     }
     private fun createUser() {
         val user =
-            User(loginEditText.text.toString(),nameEditText.text.toString(),emailEditText.text.toString(),phoneEditText.text.toString(), passwordEditText.text.toString())
+            UserRegModel(loginEditText.text.toString(),nameEditText.text.toString(),emailEditText.text.toString(),phoneEditText.text.toString(), passwordEditText.text.toString())
 
         viewModel.createNewUser(this, user)
 
@@ -57,7 +58,7 @@ class RegActivity : AppCompatActivity() {
 
     private fun initViewModel() {
         viewModel = ViewModelProvider(this).get(RegActivityViewModel::class.java)
-        viewModel.getCreateNewUserObserver().observe(this, Observer<User?> {
+        viewModel.getCreateNewUserObserver().observe(this, Observer<UserDataModel?> {
 
             if (it == null) {
                 Toast.makeText(

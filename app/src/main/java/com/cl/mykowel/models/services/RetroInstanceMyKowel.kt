@@ -6,6 +6,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+//Returns Retrofit for the API http://mykowel.pp.ua:8000/
+
 class RetroInstanceMyKowel{
     companion object{
         private const val BASE_URL_MY_KOWEL: String = "http://mykowel.pp.ua:8000/"

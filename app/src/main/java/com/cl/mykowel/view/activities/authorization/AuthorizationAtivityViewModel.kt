@@ -5,8 +5,8 @@ import android.content.SharedPreferences
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.cl.mykowel.R
-import com.cl.mykowel.models.model_user.User
-import com.cl.mykowel.models.services.ApiService
+import com.cl.mykowel.models.model_user.UserAuthModel
+import com.cl.mykowel.models.model_user.UserDataModel
 import com.cl.mykowel.models.services.RetroInstanceMyKowel
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -15,15 +15,15 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class AuthorizationAtivityViewModel : ViewModel() {
-    var createNewUserLiveData: MutableLiveData<User?> = MutableLiveData()
+    var createNewUserLiveData: MutableLiveData<UserDataModel?> = MutableLiveData()
 
 
-    fun getCreateNewUserObserver(): MutableLiveData<User?> {
+    fun getCreateNewUserObserver(): MutableLiveData<UserDataModel?> {
         return createNewUserLiveData
     }
 
 
-    fun createNewUser(context: Context, user: User) {
+    fun createNewUser(context: Context, user: UserAuthModel) {
         val retroService = RetroInstanceMyKowel.getRetroInstance()
 
 
@@ -31,16 +31,16 @@ class AuthorizationAtivityViewModel : ViewModel() {
             createPartFromString(user.login.toString()),
             createPartFromString(user.password.toString())
         )
-        call.enqueue(object : Callback<User> {
-            override fun onFailure(call: Call<User>, t: Throwable) {
+        call.enqueue(object : Callback<UserDataModel> {
+            override fun onFailure(call: Call<UserDataModel>, t: Throwable) {
                 createNewUserLiveData.postValue(null)
 
             }
 
-            override fun onResponse(call: Call<User>, response: Response<User>) {
+            override fun onResponse(call: Call<UserDataModel>, response: Response<UserDataModel>) {
                 if (response.isSuccessful) {
                     createNewUserLiveData.postValue(response.body())
-                    val user1: User? = response.body()
+                    val user1: UserDataModel? = response.body()
 
                     val sharedPref: SharedPreferences = context.getSharedPreferences(
                         (R.string.shared_preferences_user_data).toString(), Context.MODE_PRIVATE)

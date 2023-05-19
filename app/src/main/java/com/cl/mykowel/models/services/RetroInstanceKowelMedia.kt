@@ -5,6 +5,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+//Returns Retrofit for the API https://kovel.media/
+
 class RetroInstanceKowelMedia {
     companion object{
         private const val BASE_URL_KOWEL_MEDIA: String = "https://kovel.media/"
