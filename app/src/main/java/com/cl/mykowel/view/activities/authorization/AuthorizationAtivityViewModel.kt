@@ -10,6 +10,7 @@ import com.cl.mykowel.models.model_user.UserDataModel
 import com.cl.mykowel.models.services.RetroInstanceMyKowel
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,8 +47,8 @@ class AuthorizationAtivityViewModel : ViewModel() {
                         (R.string.shared_preferences_user_data).toString(), Context.MODE_PRIVATE)
 
                     val editor:SharedPreferences.Editor = sharedPref.edit().clear()
-                    editor.putBoolean("account_created", true);
-                    editor.putString("id", user1?.id.toString());
+                    editor.putBoolean("account_created", true)
+                    editor.putString("id", user1?.id.toString())
                     editor.putString("login", user1?.login)
                     editor.putString("name", user1?.name)
                     editor.putString("phone", user1?.phone)
@@ -62,7 +63,7 @@ class AuthorizationAtivityViewModel : ViewModel() {
     }
 
     private fun createPartFromString(descriptionString: String): RequestBody {
-        return RequestBody.create(MultipartBody.FORM, descriptionString)
+        return descriptionString.toRequestBody(MultipartBody.FORM)
     }
 
 }

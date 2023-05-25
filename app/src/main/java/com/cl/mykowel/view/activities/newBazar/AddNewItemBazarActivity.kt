@@ -50,13 +50,13 @@ class AddNewItemBazarActivity : AppCompatActivity() {
 
         buttonAddPhoto = findViewById(R.id.btn_add_photo)
         spinner = binding?.spCategory
-        buttonAddPhoto!!.setOnClickListener(View.OnClickListener {
+        buttonAddPhoto!!.setOnClickListener {
             openGallery()
-        })
+        }
         buttonSend = findViewById(R.id.btn_send_item_bazar)
-        buttonSend!!.setOnClickListener(View.OnClickListener {
+        buttonSend!!.setOnClickListener {
             createItemBazar()
-        })
+        }
         initViewModel()
         spinner?.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(
@@ -94,7 +94,7 @@ class AddNewItemBazarActivity : AppCompatActivity() {
             // Доступ є, відкриваємо галерею
             val intent = Intent(
                 Intent.ACTION_PICK,
-                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI
             )
             startActivityForResult(intent, PICK_IMAGE_REQUEST)
         } else {
@@ -120,7 +120,7 @@ class AddNewItemBazarActivity : AppCompatActivity() {
                     // Дозвіл надано, відкриваємо галерею
                     val intent = Intent(
                         Intent.ACTION_PICK,
-                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI
                     )
                     startActivityForResult(intent, PICK_IMAGE_REQUEST)
                 } else {

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.cl.mykowel.*
 import com.cl.mykowel.databinding.FragmentOtherBinding
@@ -23,7 +24,7 @@ class OtherFragment : Fragment() {
     ): View? {
         binding = FragmentOtherBinding.inflate(inflater, container, false)
 
-        val imageId = intArrayOf(R.drawable.ic_call, R.drawable.ic_call, R.drawable.ic_call)
+        val imageId = intArrayOf(R.drawable.ic_personalcard)
         val title = arrayOf("Афіша подій")
         val description = arrayOf("Події в місті Ковель")
 
@@ -36,14 +37,14 @@ class OtherFragment : Fragment() {
         binding!!.fragmentOtherLW.isClickable = true
         binding!!.fragmentOtherLW.adapter = FOtherButtonsAdapter(requireContext(), arrayList)
 
-        lateinit var intent: Intent
 
 
         binding!!.fragmentOtherLW.setOnItemClickListener { parent, view, position, id ->
             when (position) {
                 0 -> {
-                    intent = Intent(context, PosterActivity::class.java)
-                    startActivity(intent)
+//                    intent = Intent(context, PosterActivity::class.java)
+//                    startActivity(intent)
+                    Toast.makeText(context,"Скоро буде",Toast.LENGTH_SHORT).show()
                 }
 //                1 -> {
 //                    intent = Intent(context, ChatsActivity::class.java)

@@ -3,7 +3,6 @@ package com.cl.mykowel.view.activities.authorization
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -29,15 +28,15 @@ class AuthorizationActivity : AppCompatActivity() {
         initViewModel()
         val actionBar = supportActionBar
         actionBar?.title = "Вхід"
-        binding.textBtnRegTextView.setOnClickListener(View.OnClickListener {
-            val intent: Intent = Intent(this, RegActivity::class.java)
+        binding.textBtnRegTextView.setOnClickListener {
+            val intent = Intent(this, RegActivity::class.java)
             startActivity(intent)
 
-        })
-        binding.floatingActionButtonLogin.setOnClickListener(View.OnClickListener {
+        }
+        binding.floatingActionButtonLogin.setOnClickListener {
             createUser()
 
-        })
+        }
         loginEditText = binding.loginEditText
         passwordEditText = binding.passwordEditText
     }
@@ -52,7 +51,7 @@ class AuthorizationActivity : AppCompatActivity() {
 
     private fun initViewModel() {
         viewModel = ViewModelProvider(this).get(AuthorizationAtivityViewModel::class.java)
-        viewModel.getCreateNewUserObserver().observe(this, Observer<UserDataModel?> {
+        viewModel.getCreateNewUserObserver().observe(this) {
 
             if (it == null) {
                 Toast.makeText(
@@ -65,7 +64,7 @@ class AuthorizationActivity : AppCompatActivity() {
                 startActivity(intent)
 
             }
-        })
+        }
     }
 
 }

@@ -13,6 +13,7 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.asRequestBody
+import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.File
 import java.lang.String
 
@@ -55,6 +56,6 @@ class AddNewItemBazarActivityViewModel :
     }
 
     private fun createPartFromString(descriptionString: kotlin.String): RequestBody {
-        return RequestBody.create(MultipartBody.FORM, descriptionString)
+        return descriptionString.toRequestBody(MultipartBody.FORM)
     }
 }

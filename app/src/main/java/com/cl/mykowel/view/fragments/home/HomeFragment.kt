@@ -14,14 +14,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.cl.mykowel.R
-import com.cl.mykowel.databinding.FragmentHomeBinding
 import com.cl.mykowel.databinding.FragmentHomeListBinding
 import com.cl.mykowel.models.model_news.ItemNews
-import com.cl.mykowel.models.model_news.NewsResponse
 import com.cl.mykowel.view.fragments.adapters.HomeRecyclerViewAdapter
-import com.cl.mykowel.view.fragments.contacts.ContactsFragmentViewModel
-import com.cl.mykowel.view.fragments.placeholder.PlaceholderContent
 
 /**
  * A fragment representing a list of Items.

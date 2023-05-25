@@ -8,14 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.cl.mykowel.databinding.FragmentHomeBinding
 import com.cl.mykowel.models.model_news.ItemNews
-import com.cl.mykowel.models.model_news.NewsResponse
-import okio.`-DeprecatedUtf8`.size
-import java.nio.file.Files.size
 
 
 class HomeRecyclerViewAdapter(

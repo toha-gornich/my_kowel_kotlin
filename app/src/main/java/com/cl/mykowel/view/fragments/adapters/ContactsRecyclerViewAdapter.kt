@@ -1,22 +1,14 @@
 package com.cl.mykowel.view.fragments.adapters
 
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import com.bumptech.glide.Glide
 
-import com.cl.mykowel.view.fragments.placeholder.PlaceholderContent.PlaceholderItem
 import com.cl.mykowel.databinding.FragmentContactsBinding
-import com.cl.mykowel.databinding.FragmentContactsListBinding
-import com.cl.mykowel.databinding.FragmentHomeBinding
 import com.cl.mykowel.models.model_contact.ItemContact
-import com.cl.mykowel.models.model_news.ItemNews
 
 
 

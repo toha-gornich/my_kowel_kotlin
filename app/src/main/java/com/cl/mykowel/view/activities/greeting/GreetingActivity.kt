@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.cl.mykowel.R
 import com.cl.mykowel.databinding.ActivityGreetingBinding
 import com.cl.mykowel.view.activities.authorization.AuthorizationActivity
 

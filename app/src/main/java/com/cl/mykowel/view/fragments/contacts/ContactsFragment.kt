@@ -1,25 +1,17 @@
 package com.cl.mykowel.view.fragments.contacts
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.viewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.cl.mykowel.R
 import com.cl.mykowel.databinding.FragmentContactsListBinding
-import com.cl.mykowel.databinding.FragmentHomeListBinding
-import com.cl.mykowel.models.model_contact.ItemContact
-import com.cl.mykowel.models.model_news.ItemNews
 import com.cl.mykowel.view.fragments.adapters.ContactsRecyclerViewAdapter
-import com.cl.mykowel.view.fragments.adapters.HomeRecyclerViewAdapter
-import com.cl.mykowel.view.fragments.home.HomeFragmentViewModel
-import com.cl.mykowel.view.fragments.placeholder.PlaceholderContent
 
 
 class ContactsFragment : Fragment() {
@@ -28,6 +20,7 @@ class ContactsFragment : Fragment() {
 //    private var newsList = List<ItemContact>()
     private var adapter: ContactsRecyclerViewAdapter? = null
 
+    private val viewModel: ContactsFragmentViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,7 +28,7 @@ class ContactsFragment : Fragment() {
     ): View? {
         binding = FragmentContactsListBinding.inflate(inflater, container, false)
         val view = binding!!.root
-        val viewModel = ViewModelProvider(this).get(ContactsFragmentViewModel::class.java)
+//        val viewModel = ViewModelProvider(this).get(ContactsFragmentViewModel::class.java)
         viewModel.getContacts(requireContext())
         viewModel.myResponseList.observe(viewLifecycleOwner, Observer {
 //            newsList = it

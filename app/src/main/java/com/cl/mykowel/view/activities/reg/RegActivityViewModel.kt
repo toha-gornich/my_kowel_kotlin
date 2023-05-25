@@ -10,6 +10,7 @@ import com.cl.mykowel.models.model_user.UserRegModel
 import com.cl.mykowel.models.services.RetroInstanceMyKowel
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -63,7 +64,7 @@ class RegActivityViewModel:ViewModel() {
     }
 
     private fun createPartFromString(descriptionString: String): RequestBody {
-        return RequestBody.create(MultipartBody.FORM, descriptionString)
+        return descriptionString.toRequestBody(MultipartBody.FORM)
     }
 
 
